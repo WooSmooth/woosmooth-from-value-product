@@ -1,19 +1,19 @@
 /* WooCommerce From Value Product Admin Styles */
 
-.wcfvp-title {
+.wsfvp-title {
     font-weight: 700 !important;
 }
 
-.wcfvp-logo {
+.wsfvp-logo {
     margin-bottom: 15px;
 }
 
-.wcfvp-logo img {
+.wsfvp-logo img {
     max-height: 70px;
     width: auto;
 }
 
-.wcfvp-settings-wrap {
+.wsfvp-settings-wrap {
     background: #fff;
     padding: 20px;
     border: 1px solid #ddd;
@@ -21,11 +21,11 @@
     border-radius: 6px;
 }
 
-.wcfvp-settings-wrap h2 {
+.wsfvp-settings-wrap h2 {
     margin-top: 0;
 }
 
-.wcfvp-field-description {
+.wsfvp-field-description {
     color: #666;
     font-size: 13px;
 }

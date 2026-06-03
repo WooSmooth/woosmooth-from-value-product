@@ -4,10 +4,10 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-class WCFVP_Admin {
+class WSFVP_Admin {
 
-    const OPTION_GROUP = 'wcfvp_settings_group';
-    const MENU_SLUG = 'wcfvp-settings';
+    const OPTION_GROUP = 'wsfvp_settings_group';
+    const MENU_SLUG = 'wsfvp-settings';
 
     public function __construct() {
 
@@ -46,30 +46,30 @@ class WCFVP_Admin {
         echo '<div class="options_group">';
 
         woocommerce_wp_checkbox([
-            'id'          => '_wcfvp_enabled',
-            'label'       => __('From Value Product', 'wc-from-value-product'),
-            'description' => __('Enable From Value Product mode.', 'wc-from-value-product'),
+            'id'          => '_wsfvp_enabled',
+            'label'       => __('From Value Product', 'woosmooth-from-value-product'),
+            'description' => __('Enable From Value Product mode.', 'woosmooth-from-value-product'),
         ]);
 
         woocommerce_wp_text_input([
-            'id'          => '_wcfvp_custom_link',
-            'label'       => __('Custom Design Link', 'wc-from-value-product'),
+            'id'          => '_wsfvp_custom_link',
+            'label'       => __('Custom Design Link', 'woosmooth-from-value-product'),
             'type'        => 'url',
             'placeholder' => 'https://example.com/',
-            'description' => __('Leave empty to use the global settings', 'wc-from-value-product'),
+            'description' => __('Leave empty to use the global settings', 'woosmooth-from-value-product'),
         ]);
 
         woocommerce_wp_text_input([
-            'id'          => '_wcfvp_custom_button_text',
-            'label'       => __('Custom Button Text', 'wc-from-value-product'),
+            'id'          => '_wsfvp_custom_button_text',
+            'label'       => __('Custom Button Text', 'woosmooth-from-value-product'),
             'type'        => 'text',
-            'placeholder' => __('My custom message', 'wc-from-value-product'),
-            'description' => __('Leave empty to use the global settings', 'wc-from-value-product'),
+            'placeholder' => __('My custom message', 'woosmooth-from-value-product'),
+            'description' => __('Leave empty to use the global settings', 'woosmooth-from-value-product'),
         ]);
 
         woocommerce_wp_text_input([
-            'id' => '_wcfvp_price_min',
-            'label' => __('Minimum Price (From)', 'wc-from-value-product'),
+            'id' => '_wsfvp_price_min',
+            'label' => __('Minimum Price (From)', 'woosmooth-from-value-product'),
             'type' => 'number',
             'custom_attributes' => [
                 'step' => '0.01',
@@ -78,8 +78,8 @@ class WCFVP_Admin {
         ]);
 
         woocommerce_wp_text_input([
-            'id' => '_wcfvp_price_max',
-            'label' => __('Maximum Price (To)', 'wc-from-value-product'),
+            'id' => '_wsfvp_price_max',
+            'label' => __('Maximum Price (To)', 'woosmooth-from-value-product'),
             'type' => 'number',
             'custom_attributes' => [
                 'step' => '0.01',
@@ -88,9 +88,9 @@ class WCFVP_Admin {
         ]);
 
         woocommerce_wp_checkbox([
-            'id' => '_wcfvp_hide_add_to_cart',
-            'label' => __('Hide WooCommerce', 'wc-from-value-product'),
-            'description' => __('Hide WooCommerce button for this product only.', 'wc-from-value-product'),
+            'id' => '_wsfvp_hide_add_to_cart',
+            'label' => __('Hide WooCommerce', 'woosmooth-from-value-product'),
+            'description' => __('Hide WooCommerce button for this product only.', 'woosmooth-from-value-product'),
         ]);
 
         echo '</div>';
@@ -103,48 +103,48 @@ class WCFVP_Admin {
 
         update_post_meta(
             $product_id,
-            '_wcfvp_enabled',
-            isset($_POST['_wcfvp_enabled']) ? 'yes' : 'no'
+            '_wsfvp_enabled',
+            isset($_POST['_wsfvp_enabled']) ? 'yes' : 'no'
         );
 
-        if (isset($_POST['_wcfvp_custom_link'])) {
+        if (isset($_POST['_wsfvp_custom_link'])) {
 
             update_post_meta(
                 $product_id,
-                '_wcfvp_custom_link',
-                esc_url_raw($_POST['_wcfvp_custom_link'])
+                '_wsfvp_custom_link',
+                esc_url_raw($_POST['_wsfvp_custom_link'])
             );
         }
 
-        if (isset($_POST['_wcfvp_custom_button_text'])) {
+        if (isset($_POST['_wsfvp_custom_button_text'])) {
 
             update_post_meta(
                 $product_id,
-                '_wcfvp_custom_button_text',
-                sanitize_text_field($_POST['_wcfvp_custom_button_text'])
+                '_wsfvp_custom_button_text',
+                sanitize_text_field($_POST['_wsfvp_custom_button_text'])
             );
         }
 
-        if (isset($_POST['_wcfvp_price_min'])) {
+        if (isset($_POST['_wsfvp_price_min'])) {
             update_post_meta(
                 $product_id,
-                '_wcfvp_price_min',
-                floatval($_POST['_wcfvp_price_min'])
+                '_wsfvp_price_min',
+                floatval($_POST['_wsfvp_price_min'])
             );
         }
 
-        if (isset($_POST['_wcfvp_price_max'])) {
+        if (isset($_POST['_wsfvp_price_max'])) {
             update_post_meta(
                 $product_id,
-                '_wcfvp_price_max',
-                floatval($_POST['_wcfvp_price_max'])
+                '_wsfvp_price_max',
+                floatval($_POST['_wsfvp_price_max'])
             );
         }
 
         update_post_meta(
             $product_id,
-            '_wcfvp_hide_add_to_cart',
-            isset($_POST['_wcfvp_hide_add_to_cart']) ? 'yes' : 'no'
+            '_wsfvp_hide_add_to_cart',
+            isset($_POST['_wsfvp_hide_add_to_cart']) ? 'yes' : 'no'
         );
     }
 
@@ -170,7 +170,7 @@ class WCFVP_Admin {
 
         register_setting(
             self::OPTION_GROUP,
-            'wcfvp_default_link',
+            'wsfvp_default_link',
             [
                 'sanitize_callback' => 'esc_url_raw',
             ]
@@ -178,7 +178,7 @@ class WCFVP_Admin {
 
         register_setting(
             self::OPTION_GROUP,
-            'wcfvp_default_button_text',
+            'wsfvp_default_button_text',
             [
                 'sanitize_callback' => 'sanitize_text_field',
             ]
@@ -186,7 +186,7 @@ class WCFVP_Admin {
 
         register_setting(
             self::OPTION_GROUP,
-            'wcfvp_open_in_new_tab',
+            'wsfvp_open_in_new_tab',
             [
                 'sanitize_callback' => 'absint',
                 'default' => 0,
@@ -195,7 +195,7 @@ class WCFVP_Admin {
 
         register_setting(
             self::OPTION_GROUP,
-            'wcfvp_redirect_product_page',
+            'wsfvp_redirect_product_page',
             [
                 'sanitize_callback' => 'absint',
                 'default' => 0,
@@ -204,7 +204,7 @@ class WCFVP_Admin {
 
         register_setting(
             self::OPTION_GROUP,
-            'wcfvp_enabled_locations',
+            'wsfvp_enabled_locations',
             [
                 'sanitize_callback' => [$this, 'sanitize_locations'],
                 'default' => [],
@@ -212,55 +212,55 @@ class WCFVP_Admin {
         );
 
         add_settings_section(
-            'wcfvp_main_section',
-            __('Global Settings', 'wc-from-value-product'),
+            'wsfvp_main_section',
+            __('Global Settings', 'woosmooth-from-value-product'),
             '__return_false',
             self::MENU_SLUG
         );
 
         add_settings_field(
-            'wcfvp_default_link',
-            __('Default (Redirect) Link', 'wc-from-value-product'),
+            'wsfvp_default_link',
+            __('Default (Redirect) Link', 'woosmooth-from-value-product'),
             [$this, 'render_default_link_field'],
             self::MENU_SLUG,
-            'wcfvp_main_section'
+            'wsfvp_main_section'
         );
 
         add_settings_field(
-            'wcfvp_default_button_text',
-            __('Default Button Text', 'wc-from-value-product'),
+            'wsfvp_default_button_text',
+            __('Default Button Text', 'woosmooth-from-value-product'),
             [$this, 'render_default_button_text_field'],
             self::MENU_SLUG,
-            'wcfvp_main_section'
+            'wsfvp_main_section'
         );
 
         add_settings_field(
-            'wcfvp_open_in_new_tab',
-            __('Open Links In New Tab', 'wc-from-value-product'),
+            'wsfvp_open_in_new_tab',
+            __('Open Links In New Tab', 'woosmooth-from-value-product'),
             [$this, 'render_new_tab_field'],
             self::MENU_SLUG,
-            'wcfvp_main_section'
+            'wsfvp_main_section'
         );
 
         add_settings_field(
-            'wcfvp_redirect_product_page',
-            __('Redirect Product Pages', 'wc-from-value-product'),
+            'wsfvp_redirect_product_page',
+            __('Redirect Product Pages', 'woosmooth-from-value-product'),
             [$this, 'render_redirect_field'],
             self::MENU_SLUG,
-            'wcfvp_main_section'
+            'wsfvp_main_section'
         );
 
         add_settings_field(
-            'wcfvp_enabled_locations',
-            __('Enable Functionality On', 'wc-from-value-product'),
+            'wsfvp_enabled_locations',
+            __('Enable Functionality On', 'woosmooth-from-value-product'),
             [$this, 'render_locations_field'],
             self::MENU_SLUG,
-            'wcfvp_main_section'
+            'wsfvp_main_section'
         );
 
         register_setting(
             self::OPTION_GROUP,
-            'wcfvp_price_format',
+            'wsfvp_price_format',
             [
                 'sanitize_callback' => 'sanitize_text_field',
                 'default' => 'verbose', // verbose | compact
@@ -269,7 +269,7 @@ class WCFVP_Admin {
 
         register_setting(
             self::OPTION_GROUP,
-            'wcfvp_show_vat_label',
+            'wsfvp_show_vat_label',
             [
                 'sanitize_callback' => 'absint',
                 'default' => 1,
@@ -277,46 +277,46 @@ class WCFVP_Admin {
         );
 
         add_settings_field(
-            'wcfvp_price_format',
-            __('Price Format', 'wc-from-value-product'),
+            'wsfvp_price_format',
+            __('Price Format', 'woosmooth-from-value-product'),
             function () {
 
-                $value = get_option('wcfvp_price_format', 'verbose');
+                $value = get_option('wsfvp_price_format', 'verbose');
 
                 ?>
-                <select name="wcfvp_price_format">
+                <select name="wsfvp_price_format">
                     <option value="verbose" <?php selected($value, 'verbose'); ?>>
-                        <?php esc_html_e('From X to Y', 'wc-from-value-product'); ?>
+                        <?php esc_html_e('From X to Y', 'woosmooth-from-value-product'); ?>
                     </option>
                     <option value="compact" <?php selected($value, 'compact'); ?>>
-                        <?php esc_html_e('X - Y', 'wc-from-value-product'); ?>
+                        <?php esc_html_e('X - Y', 'woosmooth-from-value-product'); ?>
                     </option>
                 </select>
                 <?php
             },
             self::MENU_SLUG,
-            'wcfvp_main_section'
+            'wsfvp_main_section'
         );
 
         add_settings_field(
-            'wcfvp_show_vat_label',
-            __('Show VAT Label', 'wc-from-value-product'),
+            'wsfvp_show_vat_label',
+            __('Show VAT Label', 'woosmooth-from-value-product'),
             function () {
 
-                $value = get_option('wcfvp_show_vat_label', 1);
+                $value = get_option('wsfvp_show_vat_label', 1);
 
                 ?>
-                <input type="checkbox" name="wcfvp_show_vat_label" value="1" <?php checked($value, 1); ?>>
-                <?php esc_html_e('Show VAT label on frontend', 'wc-from-value-product'); ?>
+                <input type="checkbox" name="wsfvp_show_vat_label" value="1" <?php checked($value, 1); ?>>
+                <?php esc_html_e('Show VAT label on frontend', 'woosmooth-from-value-product'); ?>
                 <?php
             },
             self::MENU_SLUG,
-            'wcfvp_main_section'
+            'wsfvp_main_section'
         );
 
         register_setting(
             self::OPTION_GROUP,
-            'wcfvp_hide_cart_shop',
+            'wsfvp_hide_cart_shop',
             [
                 'sanitize_callback' => 'absint',
                 'default' => 0,
@@ -325,7 +325,7 @@ class WCFVP_Admin {
 
         register_setting(
             self::OPTION_GROUP,
-            'wcfvp_hide_cart_single',
+            'wsfvp_hide_cart_single',
             [
                 'sanitize_callback' => 'absint',
                 'default' => 0,
@@ -333,35 +333,35 @@ class WCFVP_Admin {
         );
 
         add_settings_field(
-            'wcfvp_hide_cart_shop',
-            __('Hide WooCommerce (Shop/Archives)', 'wc-from-value-product'),
+            'wsfvp_hide_cart_shop',
+            __('Hide WooCommerce (Shop/Archives)', 'woosmooth-from-value-product'),
             function () {
 
-                $value = get_option('wcfvp_hide_cart_shop', 0);
+                $value = get_option('wsfvp_hide_cart_shop', 0);
 
                 ?>
-                <input type="checkbox" name="wcfvp_hide_cart_shop" value="1" <?php checked($value, 1); ?>>
-                <span><?php esc_html_e('Hide WooCommerce button on product listings', 'wc-from-value-product'); ?></span>
+                <input type="checkbox" name="wsfvp_hide_cart_shop" value="1" <?php checked($value, 1); ?>>
+                <span><?php esc_html_e('Hide WooCommerce button on product listings', 'woosmooth-from-value-product'); ?></span>
                 <?php
             },
             self::MENU_SLUG,
-            'wcfvp_main_section'
+            'wsfvp_main_section'
         );
 
         add_settings_field(
-            'wcfvp_hide_cart_single',
-            __('Hide WooCommerce (Single Product)', 'wc-from-value-product'),
+            'wsfvp_hide_cart_single',
+            __('Hide WooCommerce (Single Product)', 'woosmooth-from-value-product'),
             function () {
 
-                $value = get_option('wcfvp_hide_cart_single', 0);
+                $value = get_option('wsfvp_hide_cart_single', 0);
 
                 ?>
-                <input type="checkbox" name="wcfvp_hide_cart_single" value="1" <?php checked($value, 1); ?>>
-                <span><?php esc_html_e('Hide WooCommerce button on product pages', 'wc-from-value-product'); ?></span>
+                <input type="checkbox" name="wsfvp_hide_cart_single" value="1" <?php checked($value, 1); ?>>
+                <span><?php esc_html_e('Hide WooCommerce button on product pages', 'woosmooth-from-value-product'); ?></span>
                 <?php
             },
             self::MENU_SLUG,
-            'wcfvp_main_section'
+            'wsfvp_main_section'
         );
     }
 
@@ -384,13 +384,13 @@ class WCFVP_Admin {
     ?>
     <div class="wrap">
 
-        <div class="wcfvp-logo">
-            <img src="<?php echo esc_url(WCFVP_PLUGIN_URL . 'assets/img/logo/logo_slogan_full_color.png'); ?>" alt="WooSmooth Logo">
+        <div class="wsfvp-logo">
+            <img src="<?php echo esc_url(wsfvp_PLUGIN_URL . 'assets/img/logo/logo_slogan_full_color.png'); ?>" alt="WooSmooth Logo">
         </div>
 
-        <h1 class="wcfvp-title"><?php esc_html_e('From Value Products With Custom Link', 'wc-from-value-product'); ?></h1>
+        <h1 class="wsfvp-title"><?php esc_html_e('From Value Products With Custom Link', 'woosmooth-from-value-product'); ?></h1>
 
-        <div class="wcfvp-settings-wrap">
+        <div class="wsfvp-settings-wrap">
 
             <form method="post" action="options.php">
 
@@ -410,11 +410,11 @@ class WCFVP_Admin {
 
     public function render_default_link_field() {
 
-        $value = get_option('wcfvp_default_link', '');
+        $value = get_option('wsfvp_default_link', '');
 
         ?>
         <input type="url"
-               name="wcfvp_default_link"
+               name="wsfvp_default_link"
                value="<?php echo esc_attr($value); ?>"
                class="regular-text">
         <?php
@@ -423,13 +423,13 @@ class WCFVP_Admin {
     public function render_default_button_text_field() {
 
         $value = get_option(
-            'wcfvp_default_button_text',
-            __('Start designing', 'wc-from-value-product')
+            'wsfvp_default_button_text',
+            __('Start designing', 'woosmooth-from-value-product')
         );
 
         ?>
         <input type="text"
-               name="wcfvp_default_button_text"
+               name="wsfvp_default_button_text"
                value="<?php echo esc_attr($value); ?>"
                class="regular-text">
         <?php
@@ -440,11 +440,11 @@ class WCFVP_Admin {
         ?>
         <label>
             <input type="checkbox"
-                   name="wcfvp_open_in_new_tab"
+                   name="wsfvp_open_in_new_tab"
                    value="1"
-                <?php checked(get_option('wcfvp_open_in_new_tab'), 1); ?>>
+                <?php checked(get_option('wsfvp_open_in_new_tab'), 1); ?>>
 
-            <?php esc_html_e('Open links in a new tab', 'wc-from-value-product'); ?>
+            <?php esc_html_e('Open links in a new tab', 'woosmooth-from-value-product'); ?>
         </label>
         <?php
     }
@@ -454,25 +454,25 @@ class WCFVP_Admin {
         ?>
         <label>
             <input type="checkbox"
-                   name="wcfvp_redirect_product_page"
+                   name="wsfvp_redirect_product_page"
                    value="1"
-                <?php checked(get_option('wcfvp_redirect_product_page'), 1); ?>>
+                <?php checked(get_option('wsfvp_redirect_product_page'), 1); ?>>
 
-            <?php esc_html_e('Redirect single product pages', 'wc-from-value-product'); ?>
+            <?php esc_html_e('Redirect single product pages', 'woosmooth-from-value-product'); ?>
         </label>
         <?php
     }
 
     public function render_locations_field() {
 
-        $locations = get_option('wcfvp_enabled_locations', []);
+        $locations = get_option('wsfvp_enabled_locations', []);
 
         $options = [
-            'shop'      => __('Shop page', 'wc-from-value-product'),
-            'archives'  => __('Category/tag archives', 'wc-from-value-product'),
-            'related'   => __('Related products', 'wc-from-value-product'),
-            'upsells'   => __('Upsells/cross-sells', 'wc-from-value-product'),
-            'single'    => __('Single product page', 'wc-from-value-product'),
+            'shop'      => __('Shop page', 'woosmooth-from-value-product'),
+            'archives'  => __('Category/tag archives', 'woosmooth-from-value-product'),
+            'related'   => __('Related products', 'woosmooth-from-value-product'),
+            'upsells'   => __('Upsells/cross-sells', 'woosmooth-from-value-product'),
+            'single'    => __('Single product page', 'woosmooth-from-value-product'),
         ];
 
         foreach ($options as $value => $label) {
@@ -481,7 +481,7 @@ class WCFVP_Admin {
             <label style="display:block;margin-bottom:8px;">
 
                 <input type="checkbox"
-                       name="wcfvp_enabled_locations[]"
+                       name="wsfvp_enabled_locations[]"
                        value="<?php echo esc_attr($value); ?>"
                     <?php checked(in_array($value, $locations, true)); ?>>
 

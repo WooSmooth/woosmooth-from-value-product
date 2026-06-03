@@ -1,12 +1,12 @@
 <?php
 /**
- * Plugin Name: WooCommerce From Value Product With Custom Link
- * Plugin URI: https://github.com/WooSmooth/wc-from-value-product
- * Description: Adds "From Value Product" functionality to WooCommerce products.
- * Version: 1.1.2
+ * Plugin Name: WooSmooth From Value Product With Custom Link
+ * Plugin URI: https://github.com/WooSmooth/woosmooth-from-value-product
+ * Description: Adds "From Value Product" functionality to WooSmooth products.
+ * Version: 2.0.0
  * Author: WooSmooth | CollisionCourse
  * Author URI: https://www.collisioncourse.be
- * Text Domain: wc-from-value-product
+ * Text Domain: woosmooth-from-value-product
  * Domain Path: /languages
  * Requires at least: 6.0
  * Requires PHP: 7.4
@@ -21,9 +21,9 @@ require 'plugin-update-checker/plugin-update-checker.php';
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 $myUpdateChecker = PucFactory::buildUpdateChecker(
-	'https://github.com/WooSmooth/wc-from-value-product',
+	'https://github.com/WooSmooth/woosmooth-from-value-product',
 	__FILE__,
-	'wc-from-value-product'
+	'woosmooth-from-value-product'
 );
 
 //Set the branch that contains the stable release.
@@ -36,8 +36,8 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-if (!defined('WCFVP_VERSION')) {
-    define('WCFVP_VERSION', '1.1.1');
+if (!defined('WSFVP_VERSION')) {
+    define('WSFVP_VERSION', '2.0.0');
 }
 
 if (!class_exists('WC_From_Value_Product')) {
@@ -46,12 +46,12 @@ if (!class_exists('WC_From_Value_Product')) {
 
         public function __construct() {
 
-            if (!defined('WCFVP_PLUGIN_PATH')) {
-                define('WCFVP_PLUGIN_PATH', plugin_dir_path(__FILE__));
+            if (!defined('WSFVP_PLUGIN_PATH')) {
+                define('WSFVP_PLUGIN_PATH', plugin_dir_path(__FILE__));
             }
 
-            if (!defined('WCFVP_PLUGIN_URL')) {
-                define('WCFVP_PLUGIN_URL', plugin_dir_url(__FILE__));
+            if (!defined('WSFVP_PLUGIN_URL')) {
+                define('WSFVP_PLUGIN_URL', plugin_dir_url(__FILE__));
             }
 
             add_action('plugins_loaded', [$this, 'init']);
@@ -70,16 +70,16 @@ if (!class_exists('WC_From_Value_Product')) {
             }
 
             load_plugin_textdomain(
-                'wc-from-value-product',
+                'woosmooth-from-value-product',
                 false,
                 dirname(plugin_basename(__FILE__)) . '/languages'
             );
 
-            require_once WCFVP_PLUGIN_PATH . 'includes/class-admin.php';
-            require_once WCFVP_PLUGIN_PATH . 'includes/class-frontend.php';
+            require_once WSFVP_PLUGIN_PATH . 'includes/class-admin.php';
+            require_once WSFVP_PLUGIN_PATH . 'includes/class-frontend.php';
 
-            new WCFVP_Admin();
-            new WCFVP_Frontend();
+            new WSFVP_Admin();
+            new WSFVP_Frontend();
         }
 
         /**
@@ -102,7 +102,7 @@ if (!class_exists('WC_From_Value_Product')) {
 
             echo esc_html__(
                 'WooCommerce From Value Product requires WooCommerce to be installed and active.',
-                'wc-from-value-product'
+                'woosmooth-from-value-product'
             );
 
             echo '</p></div>';
@@ -115,16 +115,16 @@ if (!class_exists('WC_From_Value_Product')) {
 
             if (
                 $hook !== 'product' &&
-                strpos($hook, 'wcfvp-settings') === false
+                strpos($hook, 'wsfvp-settings') === false
             ) {
                 return;
             }
 
             wp_enqueue_style(
-                'wcfvp-admin',
-                WCFVP_PLUGIN_URL . 'assets/css/admin.css',
+                'wsfvp-admin',
+                WSFVP_PLUGIN_URL . 'assets/css/admin.css',
                 [],
-                WCFVP_VERSION
+                WSFVP_VERSION
             );
         }
 
@@ -134,10 +134,10 @@ if (!class_exists('WC_From_Value_Product')) {
         public function app_assets() {
 
             wp_enqueue_style(
-                'wcfvp-app',
-                WCFVP_PLUGIN_URL . 'assets/css/app.css',
+                'wsfvp-app',
+                WSFVP_PLUGIN_URL . 'assets/css/app.css',
                 [],
-                WCFVP_VERSION
+                WSFVP_VERSION
             );
         }
     }
@@ -155,8 +155,8 @@ register_activation_hook(__FILE__, function () {
         deactivate_plugins(plugin_basename(__FILE__));
 
         wp_die(
-            esc_html__('WooCommerce From Value Product requires WooCommerce to be installed and active.', 'wc-from-value-product'),
-            esc_html__('Plugin dependency check', 'wc-from-value-product'),
+            esc_html__('WooCommerce From Value Product requires WooCommerce to be installed and active.', 'woosmooth-from-value-product'),
+            esc_html__('Plugin dependency check', 'woosmooth-from-value-product'),
             ['back_link' => true]
         );
     }

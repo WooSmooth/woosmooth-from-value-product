@@ -4,7 +4,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-class WCFVP_Frontend {
+class WSFVP_Frontend {
 
     public function __construct() {
 
@@ -53,7 +53,7 @@ class WCFVP_Frontend {
 
         return get_post_meta(
             $product_id,
-            '_wcfvp_enabled',
+            '_wsfvp_enabled',
             true
         ) === 'yes';
     }
@@ -64,7 +64,7 @@ class WCFVP_Frontend {
     private function get_enabled_locations() {
 
         $locations = get_option(
-            'wcfvp_enabled_locations',
+            'wsfvp_enabled_locations',
             []
         );
 
@@ -94,7 +94,7 @@ class WCFVP_Frontend {
 
         $custom = get_post_meta(
             $product_id,
-            '_wcfvp_custom_link',
+            '_wsfvp_custom_link',
             true
         );
 
@@ -103,7 +103,7 @@ class WCFVP_Frontend {
         }
 
         return esc_url(
-            get_option('wcfvp_default_link', '#')
+            get_option('wsfvp_default_link', '#')
         );
     }
 
@@ -114,7 +114,7 @@ class WCFVP_Frontend {
 
         $custom_text = get_post_meta(
             $product_id,
-            '_wcfvp_custom_button_text',
+            '_wsfvp_custom_button_text',
             true
         );
 
@@ -123,8 +123,8 @@ class WCFVP_Frontend {
         }
 
         $default_text = get_option(
-            'wcfvp_default_button_text',
-            __('Start designing', 'wc-from-value-product')
+            'wsfvp_default_button_text',
+            __('Start designing', 'woosmooth-from-value-product')
         );
 
         return esc_html($default_text);
@@ -136,7 +136,7 @@ class WCFVP_Frontend {
     private function get_link_target() {
 
         $new_tab = get_option(
-            'wcfvp_open_in_new_tab',
+            'wsfvp_open_in_new_tab',
             0
         );
 
@@ -289,8 +289,8 @@ class WCFVP_Frontend {
             return $price;
         }
 
-        $min = get_post_meta($product->get_id(), '_wcfvp_price_min', true);
-        $max = get_post_meta($product->get_id(), '_wcfvp_price_max', true);
+        $min = get_post_meta($product->get_id(), '_wsfvp_price_min', true);
+        $max = get_post_meta($product->get_id(), '_wsfvp_price_max', true);
 
         if (empty($min) && empty($max)) {
             return $price;
@@ -299,14 +299,14 @@ class WCFVP_Frontend {
         $min_price = wc_price($min);
         $max_price = wc_price($max);
 
-        $format = get_option('wcfvp_price_format', 'verbose');
+        $format = get_option('wsfvp_price_format', 'verbose');
 
         $vat_label = '';
 
-        if (get_option('wcfvp_show_vat_label', 1)) {
+        if (get_option('wsfvp_show_vat_label', 1)) {
             $vat_label = ' ' . esc_html(get_option(
-                'wcfvp_vat_label_text',
-                __('Incl. VAT', 'wc-from-value-product')
+                'wsfvp_vat_label_text',
+                __('Incl. VAT', 'woosmooth-from-value-product')
             ));
         }
 
@@ -316,9 +316,9 @@ class WCFVP_Frontend {
 
         return sprintf(
             '%s %s %s %s',
-            esc_html__('From', 'wc-from-value-product'),
+            esc_html__('From', 'woosmooth-from-value-product'),
             $min_price,
-            esc_html__('to', 'wc-from-value-product'),
+            esc_html__('to', 'woosmooth-from-value-product'),
             $max_price
         ) . $vat_label;
     }
@@ -352,7 +352,7 @@ class WCFVP_Frontend {
         /**
          * Redirect disabled
          */
-        if (!get_option('wcfvp_redirect_product_page', 0)) {
+        if (!get_option('wsfvp_redirect_product_page', 0)) {
             return;
         }
 
@@ -389,11 +389,11 @@ class WCFVP_Frontend {
     private function should_hide_add_to_cart($product_id) {
 
         // Product-level override
-        $product_hide = get_post_meta($product_id, '_wcfvp_hide_add_to_cart', true) === 'yes';
+        $product_hide = get_post_meta($product_id, '_wsfvp_hide_add_to_cart', true) === 'yes';
 
         // Global settings
-        $global_shop = get_option('wcfvp_hide_cart_shop', 0);
-        $global_single = get_option('wcfvp_hide_cart_single', 0);
+        $global_shop = get_option('wsfvp_hide_cart_shop', 0);
+        $global_single = get_option('wsfvp_hide_cart_single', 0);
 
         if ($product_hide) {
             return true;

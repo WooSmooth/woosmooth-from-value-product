@@ -4,7 +4,7 @@ Tags: woocommerce, product, from, value, custom link, redirect, catalog mode
 Requires at least: 6.0
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.1.2
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,12 +91,12 @@ The plugin is fully translation-ready and supports:
 * Loco Translate
 
 Text domain:
-wc-from-value-product
+woosmooth-from-value-product
 
 == Installation ==
 
 1. Upload the plugin folder to:
-`/wp-content/plugins/wc-from-value-product/`
+`/wp-content/plugins/woosmooth-from-value-product/`
 
 2. Activate the plugin via:
 WordPress Admin → Plugins → Installed Plugins
@@ -136,8 +136,11 @@ Yes, but pricing range is best used with simple products or controlled variation
 
 == Changelog ==
 
-= 1.1.2 =
-* Move menu to WooCommerce
+= 2.0.0 =
+* Plug-in refactor to WooSmooth agreements
+* Update translations
+* Core files to WooSmooth naming
+* Move menu to WooCommerce 
 
 = 1.1.1 =
 * Improved readme format
@@ -169,8 +172,8 @@ Yes, but pricing range is best used with simple products or controlled variation
 
 == Upgrade Notice ==
 
-= 1.1.2 =
-Move menu to WooCommerce
+= 2.0.0 =
+Complete WooSmooth refactor
 
 = 1.1.1 =
 This update improved the readme format

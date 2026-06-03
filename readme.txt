@@ -37,7 +37,7 @@ Features include:
 
 A dedicated settings page is available under:
 
-Settings → From Value Products
+WooCommerce → From Value Products
 
 Available global options:
 * Default design URL fallback

@@ -147,10 +147,11 @@ class WCFVP_Admin {
      */
     public function add_settings_page() {
 
-        add_options_page(
+        add_submenu_page(
+            'woocommerce',
             __('From Value Products', 'wc-from-value-product'),
             __('From Value Products', 'wc-from-value-product'),
-            'manage_options',
+            'manage_woocommerce',
             self::MENU_SLUG,
             [$this, 'render_settings_page']
         );

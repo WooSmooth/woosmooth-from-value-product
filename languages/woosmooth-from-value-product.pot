@@ -1,0 +1,216 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WooSmooth From Value Product With Custom Link\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-03 14:52+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.5; wp-7.0; php-8.3.1\n"
+"X-Domain: woosmooth-from-value-product"
+
+#. Description of the plugin
+msgid "Adds \"From Value Product\" functionality to WooSmooth products."
+msgstr ""
+
+#: includes/class-admin.php:471
+msgid "Category/tag archives"
+msgstr ""
+
+#: includes/class-admin.php:64
+msgid "Custom Button Text"
+msgstr ""
+
+#: includes/class-admin.php:56
+msgid "Custom Design Link"
+msgstr ""
+
+#: includes/class-admin.php:215
+msgid "Default (Redirect) Link"
+msgstr ""
+
+#: includes/class-admin.php:397
+msgid ""
+"Default plugin texts can be translated using WPML, Loco Translate, or "
+"another WordPress translation plugin."
+msgstr ""
+
+#: includes/class-admin.php:51
+msgid "Enable From Value Product mode."
+msgstr ""
+
+#: includes/class-admin.php:239
+msgid "Enable Functionality On"
+msgstr ""
+
+#: includes/class-frontend.php:314
+msgid "From"
+msgstr ""
+
+#: includes/class-admin.php:50
+msgid "From Value Product"
+msgstr ""
+
+#: includes/class-admin.php:158 includes/class-admin.php:159
+#: includes/class-admin.php:375
+msgid "From Value Products With Custom Link"
+msgstr ""
+
+#: includes/class-admin.php:273
+msgid "From X to Y"
+msgstr ""
+
+#: includes/class-admin.php:208
+msgid "Global Settings"
+msgstr ""
+
+#: includes/class-frontend.php:125
+msgid "Go to url"
+msgstr ""
+
+#: includes/class-admin.php:92
+msgid "Hide WooCommerce"
+msgstr ""
+
+#: includes/class-admin.php:321
+msgid "Hide WooCommerce (Shop/Archives)"
+msgstr ""
+
+#: includes/class-admin.php:337
+msgid "Hide WooCommerce (Single Product)"
+msgstr ""
+
+#: includes/class-admin.php:93
+msgid "Hide WooCommerce button for this product only."
+msgstr ""
+
+#: includes/class-admin.php:328
+msgid "Hide WooCommerce Purchase Button on product listings"
+msgstr ""
+
+#: includes/class-admin.php:344
+msgid "Hide WooCommerce Purchase Button on product pages"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://github.com/WooSmooth/woosmooth-from-value-product"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.collisioncourse.be"
+msgstr ""
+
+#: includes/class-frontend.php:302
+msgid "Incl. VAT"
+msgstr ""
+
+#: includes/class-admin.php:59 includes/class-admin.php:67
+msgid "Leave empty to use the global settings"
+msgstr ""
+
+#: includes/class-admin.php:82
+msgid "Maximum Price (To)"
+msgstr ""
+
+#: includes/class-admin.php:72
+msgid "Minimum Price (From)"
+msgstr ""
+
+#: includes/class-admin.php:66
+msgid "My custom message"
+msgstr ""
+
+#: includes/class-admin.php:411
+msgid "Need help with translations? Contact WooSmooth for translation support."
+msgstr ""
+
+#: includes/class-admin.php:446
+msgid "Open links in a new tab"
+msgstr ""
+
+#: includes/class-admin.php:223
+msgid "Open Links In New Tab"
+msgstr ""
+
+#: woosmooth-from-value-product.php:159
+msgid "Plugin dependency check"
+msgstr ""
+
+#: includes/class-admin.php:265
+msgid "Price Format"
+msgstr ""
+
+#: includes/class-admin.php:404
+msgid ""
+"Product-specific custom button text remains available on each product and "
+"can be translated through multilingual plugins such as WPML."
+msgstr ""
+
+#: includes/class-admin.php:231
+msgid "Redirect Product Pages"
+msgstr ""
+
+#: includes/class-admin.php:460
+msgid "Redirect single product pages"
+msgstr ""
+
+#: includes/class-admin.php:472
+msgid "Related products"
+msgstr ""
+
+#: includes/class-admin.php:470
+msgid "Shop page"
+msgstr ""
+
+#: includes/class-admin.php:287
+msgid "Show VAT Label"
+msgstr ""
+
+#: includes/class-admin.php:294
+msgid "Show VAT label on frontend"
+msgstr ""
+
+#: includes/class-admin.php:474
+msgid "Single product page"
+msgstr ""
+
+#: includes/class-admin.php:433
+msgid "Test link/url"
+msgstr ""
+
+#: includes/class-frontend.php:316
+msgid "to"
+msgstr ""
+
+#: includes/class-admin.php:394
+msgid "Translations"
+msgstr ""
+
+#: includes/class-admin.php:473
+msgid "Upsells/cross-sells"
+msgstr ""
+
+#: woosmooth-from-value-product.php:103 woosmooth-from-value-product.php:158
+msgid ""
+"WooCommerce From Value Product requires WooCommerce to be installed and "
+"active."
+msgstr ""
+
+#. Name of the plugin
+msgid "WooSmooth From Value Product With Custom Link"
+msgstr ""
+
+#. Author of the plugin
+msgid "WooSmooth | CollisionCourse"
+msgstr ""
+
+#: includes/class-admin.php:276
+msgid "X - Y"
+msgstr ""

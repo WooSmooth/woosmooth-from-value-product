@@ -1,0 +1,159 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooSmooth From Value Product With Custom Link 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-03 14:52+0000\n"
+"PO-Revision-Date: 2026-06-03 14:55+0000\n"
+"Last-Translator: WooSmooth <info@woosmooth.be>\n"
+"Language-Team: Dutch (Belgium)\n"
+"Language: nl_BE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: ChatGPT\n"
+"X-Domain: woosmooth-from-value-product\n"
+
+msgid "Adds \"From Value Product\" functionality to WooSmooth products."
+msgstr "Voegt “From Value Product”-functionaliteit toe aan WooSmooth-producten."
+
+msgid "Category/tag archives"
+msgstr "Categorie-/tagarchieven"
+
+msgid "Custom Button Text"
+msgstr "Aangepaste knoptekst"
+
+msgid "Custom Design Link"
+msgstr "Aangepaste ontwerplink"
+
+msgid "Default (Redirect) Link"
+msgstr "Standaard redirectlink"
+
+msgid "Default plugin texts can be translated using WPML, Loco Translate, or another WordPress translation plugin."
+msgstr "Standaard pluginteksten kunnen vertaald worden met WPML, Loco Translate of een andere WordPress-vertaalplugin."
+
+msgid "Enable From Value Product mode."
+msgstr "Schakel From Value Product-modus in."
+
+msgid "Enable Functionality On"
+msgstr "Functionaliteit inschakelen op"
+
+msgid "From"
+msgstr "Van"
+
+msgid "From Value Product"
+msgstr "From Value Product"
+
+msgid "From Value Products With Custom Link"
+msgstr "From Value Products met aangepaste link"
+
+msgid "From X to Y"
+msgstr "Van X tot Y"
+
+msgid "Global Settings"
+msgstr "Globale instellingen"
+
+msgid "Go to url"
+msgstr "Ga naar URL"
+
+msgid "Hide WooCommerce"
+msgstr "WooCommerce verbergen"
+
+msgid "Hide WooCommerce (Shop/Archives)"
+msgstr "WooCommerce verbergen (winkel/archieven)"
+
+msgid "Hide WooCommerce (Single Product)"
+msgstr "WooCommerce verbergen (productpagina)"
+
+msgid "Hide WooCommerce button for this product only."
+msgstr "Verberg de WooCommerce-knop enkel voor dit product."
+
+msgid "Hide WooCommerce Purchase Button on product listings"
+msgstr "Verberg de WooCommerce-aankoopknop op productoverzichten"
+
+msgid "Hide WooCommerce Purchase Button on product pages"
+msgstr "Verberg de WooCommerce-aankoopknop op productpagina’s"
+
+msgid "https://github.com/WooSmooth/woosmooth-from-value-product"
+msgstr "https://github.com/WooSmooth/woosmooth-from-value-product"
+
+msgid "https://www.collisioncourse.be"
+msgstr "https://www.collisioncourse.be"
+
+msgid "Incl. VAT"
+msgstr "Incl. btw"
+
+msgid "Leave empty to use the global settings"
+msgstr "Laat leeg om de globale instellingen te gebruiken"
+
+msgid "Maximum Price (To)"
+msgstr "Maximumprijs (tot)"
+
+msgid "Minimum Price (From)"
+msgstr "Minimumprijs (vanaf)"
+
+msgid "My custom message"
+msgstr "Mijn aangepaste tekst"
+
+msgid "Need help with translations? Contact WooSmooth for translation support."
+msgstr "Hulp nodig met vertalingen? Contacteer WooSmooth voor vertaalondersteuning."
+
+msgid "Open links in a new tab"
+msgstr "Open links in een nieuw tabblad"
+
+msgid "Open Links In New Tab"
+msgstr "Links openen in nieuw tabblad"
+
+msgid "Plugin dependency check"
+msgstr "Plugin-afhankelijkheidscontrole"
+
+msgid "Price Format"
+msgstr "Prijsweergave"
+
+msgid "Product-specific custom button text remains available on each product and can be translated through multilingual plugins such as WPML."
+msgstr "Productspecifieke aangepaste knoptekst blijft beschikbaar per product en kan vertaald worden via meertalige plugins zoals WPML."
+
+msgid "Redirect Product Pages"
+msgstr "Productpagina’s doorsturen"
+
+msgid "Redirect single product pages"
+msgstr "Productpagina’s doorsturen"
+
+msgid "Related products"
+msgstr "Gerelateerde producten"
+
+msgid "Shop page"
+msgstr "Winkelpagina"
+
+msgid "Show VAT Label"
+msgstr "Btw-label tonen"
+
+msgid "Show VAT label on frontend"
+msgstr "Toon btw-label op de frontend"
+
+msgid "Single product page"
+msgstr "Productpagina"
+
+msgid "Test link/url"
+msgstr "Test link/URL"
+
+msgid "to"
+msgstr "tot"
+
+msgid "Translations"
+msgstr "Vertalingen"
+
+msgid "Upsells/cross-sells"
+msgstr "Upsells/cross-sells"
+
+msgid "WooCommerce From Value Product requires WooCommerce to be installed and active."
+msgstr "WooCommerce From Value Product vereist dat WooCommerce geïnstalleerd en actief is."
+
+msgid "WooSmooth From Value Product With Custom Link"
+msgstr "WooSmooth From Value Product met aangepaste link"
+
+msgid "WooSmooth | CollisionCourse"
+msgstr "WooSmooth | CollisionCourse"
+
+msgid "X - Y"
+msgstr "X - Y"

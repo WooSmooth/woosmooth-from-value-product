@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooSmooth From Value Product\n"
+"Language: fr_FR\n"
+"PO-Revision-Date: 2026-06-03 15:02+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Category/tag archives"
+msgstr "Archives catégories/étiquettes"
+
+msgid "Custom Button Text"
+msgstr "Texte du bouton personnalisé"
+
+msgid "Custom Design Link"
+msgstr "Lien de conception personnalisé"
+
+msgid "Default (Redirect) Link"
+msgstr "Lien de redirection par défaut"
+
+msgid "Global Settings"
+msgstr "Paramètres globaux"
+
+msgid "Go to url"
+msgstr "Accéder à l’URL"
+
+msgid "From"
+msgstr "À partir de"
+
+msgid "to"
+msgstr "à"
+
+msgid "Incl. VAT"
+msgstr "TVA incluse"
+
+msgid "Translations"
+msgstr "Traductions"
+
+msgid "Shop page"
+msgstr "Page boutique"
+
+msgid "Related products"
+msgstr "Produits associés"
+
+msgid "Single product page"
+msgstr "Page produit"
+
+msgid "Price Format"
+msgstr "Format du prix"
+
+msgid "Show VAT Label"
+msgstr "Afficher le libellé TVA"
+
+msgid "Open links in a new tab"
+msgstr "Ouvrir les liens dans un nouvel onglet"
+
+msgid "Redirect single product pages"
+msgstr "Rediriger les pages produit"
+
+msgid "WooCommerce From Value Product requires WooCommerce to be installed and active."
+msgstr "WooCommerce From Value Product nécessite que WooCommerce soit installé et actif."

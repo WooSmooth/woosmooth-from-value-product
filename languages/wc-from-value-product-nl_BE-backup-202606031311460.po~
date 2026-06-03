@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce From Value Product\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-20 15:51+0000\n"
-"PO-Revision-Date: 2026-06-03 13:17+0000\n"
+"PO-Revision-Date: 2026-06-03 13:11+0000\n"
 "Last-Translator: \n"
 "Language-Team: Nederlands (België)\n"
 "Language: nl_BE\n"
@@ -56,6 +56,10 @@ msgid "From Value Product"
 msgstr "Van Value Product"
 
 #: includes/class-admin.php:391
+msgid "From Value Products"
+msgstr "From Value Products"
+
+#: includes/class-admin.php:158 includes/class-admin.php:159
 msgid "From Value Products With Custom Link"
 msgstr "Van Value Products met aangepaste link"
 
@@ -185,7 +189,7 @@ msgstr ""
 
 #. Name of the plugin
 msgid "WooCommerce From Value Product With Custom Link"
-msgstr "WooCommerce: product met aangepaste link"
+msgstr ""
 
 #. Author of the plugin
 msgid "WooSmooth | CollisionCourse"

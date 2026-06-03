@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce From Value Product\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-03 13:16+0000\n"
+"POT-Creation-Date: 2026-05-29 16:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -20,31 +20,31 @@ msgstr ""
 msgid "Adds \"From Value Product\" functionality to WooCommerce products."
 msgstr ""
 
-#: includes/class-admin.php:472
+#: includes/class-admin.php:465
 msgid "Category/tag archives"
 msgstr ""
 
-#: includes/class-admin.php:64
+#: includes/class-admin.php:58
 msgid "Custom Button Text"
 msgstr ""
 
-#: includes/class-admin.php:56
+#: includes/class-admin.php:50
 msgid "Custom Design Link"
 msgstr ""
 
-#: includes/class-admin.php:223
-msgid "Default (Redirect) Link"
-msgstr ""
-
-#: includes/class-admin.php:231
+#: includes/class-admin.php:224
 msgid "Default Button Text"
 msgstr ""
 
-#: includes/class-admin.php:51
+#: includes/class-admin.php:216
+msgid "Default Design Link"
+msgstr ""
+
+#: includes/class-admin.php:45
 msgid "Enable From Value Product mode."
 msgstr ""
 
-#: includes/class-admin.php:255
+#: includes/class-admin.php:248
 msgid "Enable Functionality On"
 msgstr ""
 
@@ -52,43 +52,44 @@ msgstr ""
 msgid "From"
 msgstr ""
 
-#: includes/class-admin.php:50
+#: includes/class-admin.php:44
 msgid "From Value Product"
 msgstr ""
 
-#: includes/class-admin.php:391
-msgid "From Value Products With Custom Link"
+#: includes/class-admin.php:151 includes/class-admin.php:152
+#: includes/class-admin.php:384
+msgid "From Value Products"
 msgstr ""
 
-#: includes/class-admin.php:289
+#: includes/class-admin.php:282
 msgid "From X to Y"
 msgstr ""
 
-#: includes/class-admin.php:216
+#: includes/class-admin.php:209
 msgid "Global Settings"
 msgstr ""
 
-#: includes/class-admin.php:92
+#: includes/class-admin.php:86
 msgid "Hide WooCommerce"
 msgstr ""
 
-#: includes/class-admin.php:337
+#: includes/class-admin.php:330
 msgid "Hide WooCommerce (Shop/Archives)"
 msgstr ""
 
-#: includes/class-admin.php:353
+#: includes/class-admin.php:346
 msgid "Hide WooCommerce (Single Product)"
 msgstr ""
 
-#: includes/class-admin.php:93
+#: includes/class-admin.php:87
 msgid "Hide WooCommerce button for this product only."
 msgstr ""
 
-#: includes/class-admin.php:344
+#: includes/class-admin.php:337
 msgid "Hide WooCommerce button on product listings"
 msgstr ""
 
-#: includes/class-admin.php:360
+#: includes/class-admin.php:353
 msgid "Hide WooCommerce button on product pages"
 msgstr ""
 
@@ -104,27 +105,27 @@ msgstr ""
 msgid "Incl. VAT"
 msgstr ""
 
-#: includes/class-admin.php:59 includes/class-admin.php:67
+#: includes/class-admin.php:53 includes/class-admin.php:61
 msgid "Leave empty to use the global settings"
 msgstr ""
 
-#: includes/class-admin.php:82
+#: includes/class-admin.php:76
 msgid "Maximum Price (To)"
 msgstr ""
 
-#: includes/class-admin.php:72
+#: includes/class-admin.php:66
 msgid "Minimum Price (From)"
 msgstr ""
 
-#: includes/class-admin.php:66
+#: includes/class-admin.php:60
 msgid "My custom message"
 msgstr ""
 
-#: includes/class-admin.php:447
+#: includes/class-admin.php:440
 msgid "Open links in a new tab"
 msgstr ""
 
-#: includes/class-admin.php:239
+#: includes/class-admin.php:232
 msgid "Open Links In New Tab"
 msgstr ""
 
@@ -132,39 +133,39 @@ msgstr ""
 msgid "Plugin dependency check"
 msgstr ""
 
-#: includes/class-admin.php:281
+#: includes/class-admin.php:274
 msgid "Price Format"
 msgstr ""
 
-#: includes/class-admin.php:247
+#: includes/class-admin.php:240
 msgid "Redirect Product Pages"
 msgstr ""
 
-#: includes/class-admin.php:461
+#: includes/class-admin.php:454
 msgid "Redirect single product pages"
 msgstr ""
 
-#: includes/class-admin.php:473
+#: includes/class-admin.php:466
 msgid "Related products"
 msgstr ""
 
-#: includes/class-admin.php:471
+#: includes/class-admin.php:464
 msgid "Shop page"
 msgstr ""
 
-#: includes/class-admin.php:303
+#: includes/class-admin.php:296
 msgid "Show VAT Label"
 msgstr ""
 
-#: includes/class-admin.php:310
+#: includes/class-admin.php:303
 msgid "Show VAT label on frontend"
 msgstr ""
 
-#: includes/class-admin.php:475
+#: includes/class-admin.php:468
 msgid "Single product page"
 msgstr ""
 
-#: includes/class-admin.php:427 includes/class-frontend.php:127
+#: includes/class-admin.php:420 includes/class-frontend.php:127
 msgid "Start designing"
 msgstr ""
 
@@ -172,8 +173,12 @@ msgstr ""
 msgid "to"
 msgstr ""
 
-#: includes/class-admin.php:474
+#: includes/class-admin.php:467
 msgid "Upsells/cross-sells"
+msgstr ""
+
+#. Name of the plugin
+msgid "WooCommerce From Value Product"
 msgstr ""
 
 #: wc-from-value-product.php:103 wc-from-value-product.php:158
@@ -182,14 +187,10 @@ msgid ""
 "active."
 msgstr ""
 
-#. Name of the plugin
-msgid "WooCommerce From Value Product With Custom Link"
-msgstr ""
-
 #. Author of the plugin
 msgid "WooSmooth | CollisionCourse"
 msgstr ""
 
-#: includes/class-admin.php:292
+#: includes/class-admin.php:285
 msgid "X - Y"
 msgstr ""

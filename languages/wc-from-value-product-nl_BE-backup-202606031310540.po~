@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce From Value Product\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-20 15:51+0000\n"
-"PO-Revision-Date: 2026-05-27 12:30+0000\n"
+"PO-Revision-Date: 2026-05-29 16:21+0000\n"
 "Last-Translator: \n"
 "Language-Team: Nederlands (België)\n"
 "Language: nl_BE\n"
@@ -19,11 +19,11 @@ msgstr ""
 msgid "Adds \"From Value Product\" functionality to WooCommerce products."
 msgstr "Voegt de functie “Van Value Product” toe aan WooCommerce-producten."
 
-#: includes/class-admin.php:309
+#: includes/class-admin.php:465
 msgid "Category/tag archives"
 msgstr "Category/tag archieven"
 
-#: includes/class-admin.php:57
+#: includes/class-admin.php:58
 msgid "Custom Button Text"
 msgstr "Aangepaste knoptekst"
 
@@ -31,11 +31,11 @@ msgstr "Aangepaste knoptekst"
 msgid "Custom Design Link"
 msgstr "Link naar ontwerp op maat"
 
-#: includes/class-admin.php:174
+#: includes/class-admin.php:224
 msgid "Default Button Text"
 msgstr "Standaardtekst voor knop"
 
-#: includes/class-admin.php:166
+#: includes/class-admin.php:216
 msgid "Default Design Link"
 msgstr "Standaardontwerp-link"
 
@@ -43,22 +43,54 @@ msgstr "Standaardontwerp-link"
 msgid "Enable From Value Product mode."
 msgstr "Schakel de modus ‘Van waarde naar product’ in."
 
-#: includes/class-admin.php:198
+#: includes/class-admin.php:248
 msgid "Enable Functionality On"
 msgstr "Functie inschakelen"
+
+#: includes/class-frontend.php:319
+msgid "From"
+msgstr "Van"
 
 #: includes/class-admin.php:44
 msgid "From Value Product"
 msgstr "Van Value Product"
 
-#: includes/class-admin.php:101 includes/class-admin.php:102
-#: includes/class-admin.php:228
+#: includes/class-admin.php:151 includes/class-admin.php:152
+#: includes/class-admin.php:384
 msgid "From Value Products"
 msgstr "From Value Products"
 
-#: includes/class-admin.php:159
+#: includes/class-admin.php:282
+msgid "From X to Y"
+msgstr "Van X tot Y"
+
+#: includes/class-admin.php:209
 msgid "Global Settings"
 msgstr "Algemene instellingen"
+
+#: includes/class-admin.php:86
+msgid "Hide WooCommerce"
+msgstr "WooCommerce verbergen"
+
+#: includes/class-admin.php:330
+msgid "Hide WooCommerce (Shop/Archives)"
+msgstr "WooCommerce verbergen (Winkel/Archief)"
+
+#: includes/class-admin.php:346
+msgid "Hide WooCommerce (Single Product)"
+msgstr "WooCommerce verbergen (enkel product)"
+
+#: includes/class-admin.php:87
+msgid "Hide WooCommerce button for this product only."
+msgstr "De WooCommerce-knop alleen voor dit product verbergen."
+
+#: includes/class-admin.php:337
+msgid "Hide WooCommerce button on product listings"
+msgstr "De WooCommerce-knop verbergen bij productvermeldingen"
+
+#: includes/class-admin.php:353
+msgid "Hide WooCommerce button on product pages"
+msgstr "De WooCommerce-knop op productpagina’s verbergen"
 
 #. URI of the plugin
 msgid "https://github.com/WooSmooth/wc-from-value-product"
@@ -68,49 +100,79 @@ msgstr "https://github.com/WooSmooth/wc-from-value-product"
 msgid "https://www.collisioncourse.be"
 msgstr "https://www.collisioncourse.be"
 
-#: includes/class-admin.php:284
+#: includes/class-frontend.php:309
+msgid "Incl. VAT"
+msgstr "Incl. BTW"
+
+#: includes/class-admin.php:53 includes/class-admin.php:61
+msgid "Leave empty to use the global settings"
+msgstr "Laat dit veld leeg om de algemene instellingen te gebruiken"
+
+#: includes/class-admin.php:76
+msgid "Maximum Price (To)"
+msgstr "Maximale prijs (tot)"
+
+#: includes/class-admin.php:66
+msgid "Minimum Price (From)"
+msgstr "Minimumprijs (vanaf)"
+
+#: includes/class-admin.php:60
+msgid "My custom message"
+msgstr "Mijn persoonlijke bericht"
+
+#: includes/class-admin.php:440
 msgid "Open links in a new tab"
 msgstr "Links in een nieuw tabblad openen"
 
-#: includes/class-admin.php:182
+#: includes/class-admin.php:232
 msgid "Open Links In New Tab"
 msgstr "Links in een nieuw tabblad openen"
 
-#: wc-from-value-product.php:122
+#: wc-from-value-product.php:159
 msgid "Plugin dependency check"
 msgstr "Controle op afhankelijkheid van plug-ins"
 
-#: includes/class-admin.php:190
+#: includes/class-admin.php:274
+msgid "Price Format"
+msgstr "Prijsweergave"
+
+#: includes/class-admin.php:240
 msgid "Redirect Product Pages"
 msgstr "Productpagina’s omleiden"
 
-#: includes/class-admin.php:298
+#: includes/class-admin.php:454
 msgid "Redirect single product pages"
 msgstr "Productpagina’s omleiden"
 
-#: includes/class-admin.php:310
+#: includes/class-admin.php:466
 msgid "Related products"
 msgstr "Gerelateerde producten"
 
-#: includes/class-admin.php:308
+#: includes/class-admin.php:464
 msgid "Shop page"
 msgstr "Shop pagina"
 
-#: includes/class-admin.php:312
+#: includes/class-admin.php:296
+msgid "Show VAT Label"
+msgstr "BTW-label weergeven"
+
+#: includes/class-admin.php:303
+msgid "Show VAT label on frontend"
+msgstr "BTW-label weergeven op de frontend"
+
+#: includes/class-admin.php:468
 msgid "Single product page"
 msgstr "Productpagina"
 
-#: includes/class-admin.php:59 includes/class-admin.php:264
-#: includes/class-frontend.php:120
+#: includes/class-admin.php:420 includes/class-frontend.php:127
 msgid "Start designing"
 msgstr "Begin met ontwerpen"
 
-#: includes/class-frontend.php:272
-#| msgid "Starts from "
-msgid "Starts from"
-msgstr "Vanaf"
+#: includes/class-frontend.php:321
+msgid "to"
+msgstr "tot"
 
-#: includes/class-admin.php:311
+#: includes/class-admin.php:467
 msgid "Upsells/cross-sells"
 msgstr "Upsells/cross-sells"
 
@@ -118,7 +180,7 @@ msgstr "Upsells/cross-sells"
 msgid "WooCommerce From Value Product"
 msgstr "WooCommerce From Value Product"
 
-#: wc-from-value-product.php:79 wc-from-value-product.php:121
+#: wc-from-value-product.php:103 wc-from-value-product.php:158
 msgid ""
 "WooCommerce From Value Product requires WooCommerce to be installed and "
 "active."
@@ -129,3 +191,7 @@ msgstr ""
 #. Author of the plugin
 msgid "WooSmooth | CollisionCourse"
 msgstr "WooSmooth | CollisionCourse"
+
+#: includes/class-admin.php:285
+msgid "X - Y"
+msgstr "X - Y"

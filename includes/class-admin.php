@@ -30,6 +30,12 @@ class WCFVP_Admin {
             'admin_init',
             [$this, 'register_settings']
         );
+
+        add_action(
+            'admin_menu',
+            [$this, 'move_menu_to_bottom'],
+            999
+        );
     }
 
     /**
@@ -149,8 +155,8 @@ class WCFVP_Admin {
 
         add_submenu_page(
             'woocommerce',
-            __('From Value Products', 'wc-from-value-product'),
-            __('From Value Products', 'wc-from-value-product'),
+            'From Value Products With Custom Link',
+            'From Value Products With Custom Link',
             'manage_woocommerce',
             self::MENU_SLUG,
             [$this, 'render_settings_page']
@@ -214,7 +220,7 @@ class WCFVP_Admin {
 
         add_settings_field(
             'wcfvp_default_link',
-            __('Default Design Link', 'wc-from-value-product'),
+            __('Default (Redirect) Link', 'wc-from-value-product'),
             [$this, 'render_default_link_field'],
             self::MENU_SLUG,
             'wcfvp_main_section'
@@ -382,7 +388,7 @@ class WCFVP_Admin {
             <img src="<?php echo esc_url(WCFVP_PLUGIN_URL . 'assets/img/logo/logo_slogan_full_color.png'); ?>" alt="WooSmooth Logo">
         </div>
 
-        <h1 class="wcfvp-title"><?php esc_html_e('From Value Products', 'wc-from-value-product'); ?></h1>
+        <h1 class="wcfvp-title"><?php esc_html_e('From Value Products With Custom Link', 'wc-from-value-product'); ?></h1>
 
         <div class="wcfvp-settings-wrap">
 
@@ -483,6 +489,32 @@ class WCFVP_Admin {
 
             </label>
             <?php
+        }
+    }
+
+    public function move_menu_to_bottom() {
+
+        global $submenu;
+
+        if (!isset($submenu['woocommerce'])) {
+            return;
+        }
+
+        foreach ($submenu['woocommerce'] as $key => $item) {
+
+            if (
+                isset($item[2]) &&
+                $item[2] === self::MENU_SLUG
+            ) {
+
+                $menu_item = $item;
+
+                unset($submenu['woocommerce'][$key]);
+
+                $submenu['woocommerce'][] = $menu_item;
+
+                break;
+            }
         }
     }
 }

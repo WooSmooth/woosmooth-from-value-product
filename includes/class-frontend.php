@@ -122,12 +122,7 @@ class WSFVP_Frontend {
             return esc_html($custom_text);
         }
 
-        $default_text = get_option(
-            'wsfvp_default_button_text',
-            __('Start designing', 'woosmooth-from-value-product')
-        );
-
-        return esc_html($default_text);
+        return esc_html__('Go to url', 'woosmooth-from-value-product');
     }
 
     /**
@@ -227,7 +222,7 @@ class WSFVP_Frontend {
         }
 
         if ($this->should_hide_add_to_cart($product->get_id())) {
-            return;
+            return '';
         }
 
         return $this->get_button_text($product->get_id());
@@ -304,10 +299,10 @@ class WSFVP_Frontend {
         $vat_label = '';
 
         if (get_option('wsfvp_show_vat_label', 1)) {
-            $vat_label = ' ' . esc_html(get_option(
-                'wsfvp_vat_label_text',
-                __('Incl. VAT', 'woosmooth-from-value-product')
-            ));
+            $vat_label = ' ' . esc_html__(
+                'Incl. VAT',
+                'woosmooth-from-value-product'
+            );
         }
 
         if ($format === 'compact') {

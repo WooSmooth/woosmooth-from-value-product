@@ -63,7 +63,7 @@ class WSFVP_Admin {
             'id'          => '_wsfvp_custom_button_text',
             'label'       => __('Custom Button Text', 'woosmooth-from-value-product'),
             'type'        => 'text',
-            'placeholder' => __('My custom message', 'woosmooth-from-value-product'),
+            'placeholder' => esc_attr__('My custom message', 'woosmooth-from-value-product'),
             'description' => __('Leave empty to use the global settings', 'woosmooth-from-value-product'),
         ]);
 
@@ -155,8 +155,8 @@ class WSFVP_Admin {
 
         add_submenu_page(
             'woocommerce',
-            'From Value Products With Custom Link',
-            'From Value Products With Custom Link',
+             __('From Value Products With Custom Link', 'woosmooth-from-value-product'),
+    __('From Value Products With Custom Link', 'woosmooth-from-value-product'),
             'manage_woocommerce',
             self::MENU_SLUG,
             [$this, 'render_settings_page']
@@ -173,14 +173,6 @@ class WSFVP_Admin {
             'wsfvp_default_link',
             [
                 'sanitize_callback' => 'esc_url_raw',
-            ]
-        );
-
-        register_setting(
-            self::OPTION_GROUP,
-            'wsfvp_default_button_text',
-            [
-                'sanitize_callback' => 'sanitize_text_field',
             ]
         );
 
@@ -222,14 +214,6 @@ class WSFVP_Admin {
             'wsfvp_default_link',
             __('Default (Redirect) Link', 'woosmooth-from-value-product'),
             [$this, 'render_default_link_field'],
-            self::MENU_SLUG,
-            'wsfvp_main_section'
-        );
-
-        add_settings_field(
-            'wsfvp_default_button_text',
-            __('Default Button Text', 'woosmooth-from-value-product'),
-            [$this, 'render_default_button_text_field'],
             self::MENU_SLUG,
             'wsfvp_main_section'
         );
@@ -341,7 +325,7 @@ class WSFVP_Admin {
 
                 ?>
                 <input type="checkbox" name="wsfvp_hide_cart_shop" value="1" <?php checked($value, 1); ?>>
-                <span><?php esc_html_e('Hide WooCommerce button on product listings', 'woosmooth-from-value-product'); ?></span>
+                <span><?php esc_html_e('Hide WooCommerce Purchase Button on product listings', 'woosmooth-from-value-product'); ?></span>
                 <?php
             },
             self::MENU_SLUG,
@@ -357,7 +341,7 @@ class WSFVP_Admin {
 
                 ?>
                 <input type="checkbox" name="wsfvp_hide_cart_single" value="1" <?php checked($value, 1); ?>>
-                <span><?php esc_html_e('Hide WooCommerce button on product pages', 'woosmooth-from-value-product'); ?></span>
+                <span><?php esc_html_e('Hide WooCommerce Purchase Button on product pages', 'woosmooth-from-value-product'); ?></span>
                 <?php
             },
             self::MENU_SLUG,
@@ -381,36 +365,63 @@ class WSFVP_Admin {
      * Settings page
      */
     public function render_settings_page() {
-    ?>
-    <div class="wrap">
+        ?>
+        <div class="wrap">
 
-        <div class="wsfvp-logo">
-            <img src="<?php echo esc_url(wsfvp_PLUGIN_URL . 'assets/img/logo/logo_slogan_full_color.png'); ?>" alt="WooSmooth Logo">
+            <div class="wsfvp-logo">
+                <img src="<?php echo esc_url(WSFVP_PLUGIN_URL . 'assets/img/logo/logo_slogan_full_color.png'); ?>" alt="WooSmooth Logo">
+            </div>
+
+            <h1 class="wsfvp-title"><?php esc_html_e('From Value Products With Custom Link', 'woosmooth-from-value-product'); ?></h1>
+
+            <?php settings_errors(); ?>
+            
+            <div class="wsfvp-settings-wrap section-options">
+
+                <form method="post" action="options.php">
+
+                    <?php
+                    settings_fields(self::OPTION_GROUP);
+                    do_settings_sections(self::MENU_SLUG);
+                    submit_button();
+                    ?>
+
+                </form>
+
+            </div>
+
+            <div class="wsfvp-settings-wrap section-translations">
+                <h2><?php esc_html_e('Translations', 'woosmooth-from-value-product'); ?></h2>
+
+                <p>
+                    <?php esc_html_e(
+                        'Default plugin texts can be translated using WPML, Loco Translate, or another WordPress translation plugin.',
+                        'woosmooth-from-value-product'
+                    ); ?>
+                </p>
+
+                <p>
+                    <?php esc_html_e(
+                        'Product-specific custom button text remains available on each product and can be translated through multilingual plugins such as WPML.',
+                        'woosmooth-from-value-product'
+                    ); ?>
+                </p>
+
+                <p>
+                    <?php esc_html_e(
+                        'Need help with translations? Contact WooSmooth for translation support.',
+                        'woosmooth-from-value-product'
+                    ); ?>
+                </p>
+            </div>
+
         </div>
-
-        <h1 class="wsfvp-title"><?php esc_html_e('From Value Products With Custom Link', 'woosmooth-from-value-product'); ?></h1>
-
-        <div class="wsfvp-settings-wrap">
-
-            <form method="post" action="options.php">
-
-                <?php
-                settings_fields(self::OPTION_GROUP);
-                do_settings_sections(self::MENU_SLUG);
-                submit_button();
-                ?>
-
-            </form>
-
-        </div>
-
-    </div>
-    <?php
-}
+        <?php
+    }
 
     public function render_default_link_field() {
 
-        $value = get_option('wsfvp_default_link', '');
+        $value = get_option('wsfvp_default_link', 'https://woosmooth.be/');
 
         ?>
         <input type="url"
@@ -418,21 +429,9 @@ class WSFVP_Admin {
                value="<?php echo esc_attr($value); ?>"
                class="regular-text">
         <?php
-    }
-
-    public function render_default_button_text_field() {
-
-        $value = get_option(
-            'wsfvp_default_button_text',
-            __('Start designing', 'woosmooth-from-value-product')
-        );
-
-        ?>
-        <input type="text"
-               name="wsfvp_default_button_text"
-               value="<?php echo esc_attr($value); ?>"
-               class="regular-text">
-        <?php
+        if ($value) {
+            ?>&nbsp;<a href="<?php echo esc_attr($value); ?>" target="_blank" class="wsfvp_link"><?php esc_html_e('Test link/url', 'woosmooth-from-value-product'); ?></a><?php
+        }
     }
 
     public function render_new_tab_field() {
@@ -517,4 +516,5 @@ class WSFVP_Admin {
             }
         }
     }
+
 }

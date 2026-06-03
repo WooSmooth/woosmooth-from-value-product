@@ -40,9 +40,9 @@ if (!defined('WSFVP_VERSION')) {
     define('WSFVP_VERSION', '2.0.0');
 }
 
-if (!class_exists('WC_From_Value_Product')) {
+if (!class_exists('WS_From_Value_Product')) {
 
-    class WC_From_Value_Product {
+    class WS_From_Value_Product {
 
         public function __construct() {
 
@@ -142,7 +142,7 @@ if (!class_exists('WC_From_Value_Product')) {
         }
     }
 
-    new WC_From_Value_Product();
+    new WS_From_Value_Product();
 }
 
 /**

@@ -1,5 +1,14 @@
 /* WooCommerce From Value Product Admin Styles */
 
+/* WooCommerce From Value Product Admin Styles */
+
+:root {
+    --wsfvp-text-color: #1b2028;
+    --wsfvp-link-color: #fb4506;
+    --wsfvp-bg-color: #fff;
+    --wsfvp-border-color: #ddd;
+}
+
 .wsfvp-title {
     font-weight: 700 !important;
 }
@@ -14,9 +23,9 @@
 }
 
 .wsfvp-settings-wrap {
-    background: #fff;
+    background: var(--wsfvp-bg-color);
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--wsfvp-border-color);
     margin-top: 15px;
     border-radius: 6px;
 }
@@ -26,6 +35,17 @@
 }
 
 .wsfvp-field-description {
-    color: #666;
+    color: var(--wsfvp-text-color);
     font-size: 13px;
+}
+
+.wsfvp_link,
+.wsfvp_link:visited {
+    color: var(--wsfvp-link-color);
+}
+
+.wsfvp_link:hover,
+.wsfvp_link:active,
+.wsfvp_link:focus {
+    color: var(--wsfvp-text-color);
 }

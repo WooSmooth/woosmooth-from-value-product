@@ -136,6 +136,9 @@ Yes, but pricing range is best used with simple products or controlled variation
 
 == Changelog ==
 
+= 1.1.2 =
+* Move menu to WooCommerce
+
 = 1.1.1 =
 * Improved readme format
 
@@ -165,6 +168,9 @@ Yes, but pricing range is best used with simple products or controlled variation
 * Frontend location controls
 
 == Upgrade Notice ==
+
+= 1.1.2 =
+Move menu to WooCommerce
 
 = 1.1.1 =
 This update improved the readme format

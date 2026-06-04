@@ -7,6 +7,7 @@ if (!defined('ABSPATH')) {
 class WSFVP_Admin {
 
     const OPTION_GROUP = 'wsfvp_settings_group';
+    const TRANSLATION_OPTION_GROUP = 'wsfvp_translation_settings_group';
     const MENU_SLUG = 'wsfvp-settings';
 
     public function __construct() {
@@ -347,6 +348,15 @@ class WSFVP_Admin {
             self::MENU_SLUG,
             'wsfvp_main_section'
         );
+
+        register_setting(
+            self::TRANSLATION_OPTION_GROUP,
+            'wsfvp_button_label_translations',
+            [
+                'sanitize_callback' => [$this, 'sanitize_button_label_translations'],
+                'default' => [],
+            ]
+        );
     }
 
     /**
@@ -395,14 +405,58 @@ class WSFVP_Admin {
 
                 <p>
                     <?php esc_html_e(
-                        'Default plugin texts can be translated using WPML, Loco Translate, or another WordPress translation plugin.',
+                        'Configure fallback button labels per language. Product-specific custom button text still has priority.',
                         'woosmooth-from-value-product'
                     ); ?>
                 </p>
 
                 <p>
                     <?php esc_html_e(
-                        'Product-specific custom button text remains available on each product and can be translated through multilingual plugins such as WPML.',
+                        'This version includes support for the following languages:',
+                        'woosmooth-from-value-product'
+                    ); ?>
+                </p>
+
+                <form method="post" action="options.php">
+                    <?php
+                    settings_fields(self::TRANSLATION_OPTION_GROUP);
+
+                    $labels = get_option('wsfvp_button_label_translations', []);
+                    ?>
+
+                    <table class="form-table" role="presentation">
+                        <?php foreach ($this->get_supported_locales() as $locale => $language_name) : ?>
+                            <tr>
+                                <th scope="row">
+                                    <label for="wsfvp_button_label_<?php echo esc_attr($locale); ?>">
+                                        <?php echo esc_html($language_name); ?>
+                                        <span class="wsfvp_flag">
+                                            <img src="<?php echo esc_url(WSFVP_PLUGIN_URL . 'assets/img/flags/'.esc_attr($locale).'.svg'); ?>" alt="WooSmooth Logo">
+                                        </span>
+                                    </label>
+                                </th>
+                                <td>
+                                    <input
+                                        type="text"
+                                        id="wsfvp_button_label_<?php echo esc_attr($locale); ?>"
+                                        name="wsfvp_button_label_translations[<?php echo esc_attr($locale); ?>]"
+                                        value="<?php echo esc_attr($labels[$locale] ?? ''); ?>"
+                                        class="regular-text"
+                                        placeholder="<?php esc_attr_e('Go to url', 'woosmooth-from-value-product'); ?>"
+                                    />
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </table>
+
+                    <?php submit_button(__('Save translations', 'woosmooth-from-value-product')); ?>
+                </form>
+
+                <br>
+
+                <p>
+                    <?php esc_html_e(
+                        'Default plugin texts can be translated using WPML, Loco Translate, or another WordPress translation plugin.',
                         'woosmooth-from-value-product'
                     ); ?>
                 </p>
@@ -515,6 +569,37 @@ class WSFVP_Admin {
                 break;
             }
         }
+    }
+
+    private function get_supported_locales() {
+
+    return [
+        'en_US' => __('English', 'woosmooth-from-value-product'),
+        'nl_BE' => __('Dutch (Belgium)', 'woosmooth-from-value-product'),
+        'fr_BE' => __('French (Belgium)', 'woosmooth-from-value-product'),
+        'fr_FR' => __('French (France)', 'woosmooth-from-value-product'),
+        'de_DE' => __('German (Germany)', 'woosmooth-from-value-product'),
+    ];
+}
+
+    public function sanitize_button_label_translations($input) {
+
+        if (!is_array($input)) {
+            return [];
+        }
+
+        $sanitized = [];
+
+        foreach ($input as $locale => $label) {
+            $locale = sanitize_text_field($locale);
+            $label  = sanitize_text_field($label);
+
+            if ($label !== '') {
+                $sanitized[$locale] = $label;
+            }
+        }
+
+        return $sanitized;
     }
 
 }

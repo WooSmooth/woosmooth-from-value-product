@@ -3,7 +3,7 @@
  * Plugin Name: WooSmooth From Value Product With Custom Link
  * Plugin URI: https://github.com/WooSmooth/woosmooth-from-value-product
  * Description: Adds "From Value Product" functionality to WooSmooth products.
- * Version: 2.0.0
+ * Version: 2.1.0
  * Author: WooSmooth | CollisionCourse
  * Author URI: https://www.collisioncourse.be
  * Text Domain: woosmooth-from-value-product
@@ -37,7 +37,7 @@ if (!defined('ABSPATH')) {
 }
 
 if (!defined('WSFVP_VERSION')) {
-    define('WSFVP_VERSION', '2.0.0');
+    define('WSFVP_VERSION', '2.1.0');
 }
 
 if (!class_exists('WS_From_Value_Product')) {

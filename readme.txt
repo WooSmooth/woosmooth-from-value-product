@@ -4,7 +4,7 @@ Tags: woocommerce, product, custom link, redirect, configurator, catalog mode, q
 Requires at least: 6.0
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 2.0.0
+Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -172,6 +172,16 @@ Yes. The plugin includes bundled language files and supports WPML, Polylang, and
 
 == Changelog ==
 
+= 2.1.0 =
+
+* Added multilingual support for link button labels.
+* Supported locales:
+  * English (default)
+  * Dutch (Belgium) – nl_BE
+  * French (Belgium) – fr_BE
+  * French (France) – fr_FR
+  * German (Germany) – de_DE
+
 = 2.0.0 =
 
 * Rebranded as WooSmooth From Value Product With Custom Link
@@ -216,6 +226,10 @@ Yes. The plugin includes bundled language files and supports WPML, Polylang, and
 * Frontend location controls
 
 == Upgrade Notice ==
+
+= 2.1.0 =
+
+Added multilingual support for link button labels.
 
 = 2.0.0 =
 

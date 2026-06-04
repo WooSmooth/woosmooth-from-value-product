@@ -49,3 +49,13 @@
 .wsfvp_link:focus {
     color: var(--wsfvp-text-color);
 }
+
+.section-translations .wsfvp_flag {
+    display: block;
+    background: transparent;
+}
+
+.section-translations .wsfvp_flag img {
+    width: 40px;
+    height: 12px;
+}

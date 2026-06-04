@@ -122,6 +122,27 @@ class WSFVP_Frontend {
             return esc_html($custom_text);
         }
 
+        $labels = get_option('wsfvp_button_label_translations', []);
+
+        if (is_array($labels)) {
+            $locale = $this->get_current_locale();
+
+            if (!empty($labels[$locale])) {
+                return esc_html($labels[$locale]);
+            }
+
+            $language_code = substr($locale, 0, 2);
+
+            foreach ($labels as $stored_locale => $label) {
+                if (
+                    strpos($stored_locale, $language_code . '_') === 0 &&
+                    !empty($label)
+                ) {
+                    return esc_html($label);
+                }
+            }
+        }
+
         return esc_html__('Go to url', 'woosmooth-from-value-product');
     }
 
@@ -420,5 +441,29 @@ class WSFVP_Frontend {
         }
 
         return $purchasable;
+    }
+
+    private function get_current_locale() {
+
+        if (defined('ICL_LANGUAGE_CODE')) {
+            $current_language = apply_filters('wpml_current_language', null);
+
+            if (!empty($current_language)) {
+                $active_languages = apply_filters(
+                    'wpml_active_languages',
+                    null,
+                    ['skip_missing' => 0]
+                );
+
+                if (
+                    is_array($active_languages) &&
+                    isset($active_languages[$current_language]['default_locale'])
+                ) {
+                    return $active_languages[$current_language]['default_locale'];
+                }
+            }
+        }
+
+        return determine_locale();
     }
 }

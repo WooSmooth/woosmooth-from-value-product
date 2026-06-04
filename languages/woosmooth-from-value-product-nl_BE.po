@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WooSmooth From Value Product With Custom Link 2.0.0\n"
+"Project-Id-Version: WooSmooth From Value Product With Custom Link\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-03 14:52+0000\n"
-"PO-Revision-Date: 2026-06-03 14:55+0000\n"
+"POT-Creation-Date: 2026-06-04 21:08+0000\n"
+"PO-Revision-Date: 2026-06-04 21:22+0000\n"
 "Last-Translator: WooSmooth <info@woosmooth.be>\n"
-"Language-Team: Dutch (Belgium)\n"
+"Language-Team: nl_BE\n"
 "Language: nl_BE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
@@ -20,6 +20,9 @@ msgstr "Voegt “From Value Product”-functionaliteit toe aan WooSmooth-product
 msgid "Category/tag archives"
 msgstr "Categorie-/tagarchieven"
 
+msgid "Configure fallback button labels per language. Product-specific custom button text still has priority."
+msgstr "Configureer standaard knoplabels per taal. Productspecifieke knopteksten hebben nog steeds prioriteit."
+
 msgid "Custom Button Text"
 msgstr "Aangepaste knoptekst"
 
@@ -32,11 +35,23 @@ msgstr "Standaard redirectlink"
 msgid "Default plugin texts can be translated using WPML, Loco Translate, or another WordPress translation plugin."
 msgstr "Standaard pluginteksten kunnen vertaald worden met WPML, Loco Translate of een andere WordPress-vertaalplugin."
 
+msgid "Dutch (Belgium)"
+msgstr "Nederlands (België)"
+
 msgid "Enable From Value Product mode."
 msgstr "Schakel From Value Product-modus in."
 
 msgid "Enable Functionality On"
 msgstr "Functionaliteit inschakelen op"
+
+msgid "English"
+msgstr "Engels"
+
+msgid "French (Belgium)"
+msgstr "Frans (België)"
+
+msgid "French (France)"
+msgstr "Frans (Frankrijk)"
 
 msgid "From"
 msgstr "Van"
@@ -49,6 +64,9 @@ msgstr "From Value Products met aangepaste link"
 
 msgid "From X to Y"
 msgstr "Van X tot Y"
+
+msgid "German (Germany)"
+msgstr "Duits (Duitsland)"
 
 msgid "Global Settings"
 msgstr "Globale instellingen"
@@ -110,9 +128,6 @@ msgstr "Plugin-afhankelijkheidscontrole"
 msgid "Price Format"
 msgstr "Prijsweergave"
 
-msgid "Product-specific custom button text remains available on each product and can be translated through multilingual plugins such as WPML."
-msgstr "Productspecifieke aangepaste knoptekst blijft beschikbaar per product en kan vertaald worden via meertalige plugins zoals WPML."
-
 msgid "Redirect Product Pages"
 msgstr "Productpagina’s doorsturen"
 
@@ -121,6 +136,9 @@ msgstr "Productpagina’s doorsturen"
 
 msgid "Related products"
 msgstr "Gerelateerde producten"
+
+msgid "Save translations"
+msgstr "Vertalingen opslaan"
 
 msgid "Shop page"
 msgstr "Winkelpagina"
@@ -136,6 +154,9 @@ msgstr "Productpagina"
 
 msgid "Test link/url"
 msgstr "Test link/URL"
+
+msgid "This version includes support for the following languages:"
+msgstr "Deze versie bevat ondersteuning voor de volgende talen:"
 
 msgid "to"
 msgstr "tot"

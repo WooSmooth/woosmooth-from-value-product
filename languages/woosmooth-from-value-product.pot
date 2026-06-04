@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WooSmooth From Value Product With Custom Link\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-03 14:52+0000\n"
+"POT-Creation-Date: 2026-06-04 21:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -20,82 +20,108 @@ msgstr ""
 msgid "Adds \"From Value Product\" functionality to WooSmooth products."
 msgstr ""
 
-#: includes/class-admin.php:471
+#: includes/class-admin.php:525
 msgid "Category/tag archives"
 msgstr ""
 
-#: includes/class-admin.php:64
+#: includes/class-admin.php:407
+msgid ""
+"Configure fallback button labels per language. Product-specific custom "
+"button text still has priority."
+msgstr ""
+
+#: includes/class-admin.php:65
 msgid "Custom Button Text"
 msgstr ""
 
-#: includes/class-admin.php:56
+#: includes/class-admin.php:57
 msgid "Custom Design Link"
 msgstr ""
 
-#: includes/class-admin.php:215
+#: includes/class-admin.php:216
 msgid "Default (Redirect) Link"
 msgstr ""
 
-#: includes/class-admin.php:397
+#: includes/class-admin.php:458
 msgid ""
 "Default plugin texts can be translated using WPML, Loco Translate, or "
 "another WordPress translation plugin."
 msgstr ""
 
-#: includes/class-admin.php:51
+#: includes/class-admin.php:578
+msgid "Dutch (Belgium)"
+msgstr ""
+
+#: includes/class-admin.php:52
 msgid "Enable From Value Product mode."
 msgstr ""
 
-#: includes/class-admin.php:239
+#: includes/class-admin.php:240
 msgid "Enable Functionality On"
 msgstr ""
 
-#: includes/class-frontend.php:314
+#: includes/class-admin.php:577
+msgid "English"
+msgstr ""
+
+#: includes/class-admin.php:579
+msgid "French (Belgium)"
+msgstr ""
+
+#: includes/class-admin.php:580
+msgid "French (France)"
+msgstr ""
+
+#: includes/class-frontend.php:335
 msgid "From"
 msgstr ""
 
-#: includes/class-admin.php:50
+#: includes/class-admin.php:51
 msgid "From Value Product"
 msgstr ""
 
-#: includes/class-admin.php:158 includes/class-admin.php:159
-#: includes/class-admin.php:375
+#: includes/class-admin.php:159 includes/class-admin.php:160
+#: includes/class-admin.php:385
 msgid "From Value Products With Custom Link"
 msgstr ""
 
-#: includes/class-admin.php:273
+#: includes/class-admin.php:274
 msgid "From X to Y"
 msgstr ""
 
-#: includes/class-admin.php:208
+#: includes/class-admin.php:581
+msgid "German (Germany)"
+msgstr ""
+
+#: includes/class-admin.php:209
 msgid "Global Settings"
 msgstr ""
 
-#: includes/class-frontend.php:125
+#: includes/class-admin.php:445 includes/class-frontend.php:146
 msgid "Go to url"
 msgstr ""
 
-#: includes/class-admin.php:92
+#: includes/class-admin.php:93
 msgid "Hide WooCommerce"
 msgstr ""
 
-#: includes/class-admin.php:321
+#: includes/class-admin.php:322
 msgid "Hide WooCommerce (Shop/Archives)"
 msgstr ""
 
-#: includes/class-admin.php:337
+#: includes/class-admin.php:338
 msgid "Hide WooCommerce (Single Product)"
 msgstr ""
 
-#: includes/class-admin.php:93
+#: includes/class-admin.php:94
 msgid "Hide WooCommerce button for this product only."
 msgstr ""
 
-#: includes/class-admin.php:328
+#: includes/class-admin.php:329
 msgid "Hide WooCommerce Purchase Button on product listings"
 msgstr ""
 
-#: includes/class-admin.php:344
+#: includes/class-admin.php:345
 msgid "Hide WooCommerce Purchase Button on product pages"
 msgstr ""
 
@@ -107,35 +133,35 @@ msgstr ""
 msgid "https://www.collisioncourse.be"
 msgstr ""
 
-#: includes/class-frontend.php:302
+#: includes/class-frontend.php:323
 msgid "Incl. VAT"
 msgstr ""
 
-#: includes/class-admin.php:59 includes/class-admin.php:67
+#: includes/class-admin.php:60 includes/class-admin.php:68
 msgid "Leave empty to use the global settings"
 msgstr ""
 
-#: includes/class-admin.php:82
+#: includes/class-admin.php:83
 msgid "Maximum Price (To)"
 msgstr ""
 
-#: includes/class-admin.php:72
+#: includes/class-admin.php:73
 msgid "Minimum Price (From)"
 msgstr ""
 
-#: includes/class-admin.php:66
+#: includes/class-admin.php:67
 msgid "My custom message"
 msgstr ""
 
-#: includes/class-admin.php:411
+#: includes/class-admin.php:465
 msgid "Need help with translations? Contact WooSmooth for translation support."
 msgstr ""
 
-#: includes/class-admin.php:446
+#: includes/class-admin.php:500
 msgid "Open links in a new tab"
 msgstr ""
 
-#: includes/class-admin.php:223
+#: includes/class-admin.php:224
 msgid "Open Links In New Tab"
 msgstr ""
 
@@ -143,57 +169,59 @@ msgstr ""
 msgid "Plugin dependency check"
 msgstr ""
 
-#: includes/class-admin.php:265
+#: includes/class-admin.php:266
 msgid "Price Format"
 msgstr ""
 
-#: includes/class-admin.php:404
-msgid ""
-"Product-specific custom button text remains available on each product and "
-"can be translated through multilingual plugins such as WPML."
-msgstr ""
-
-#: includes/class-admin.php:231
+#: includes/class-admin.php:232
 msgid "Redirect Product Pages"
 msgstr ""
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:514
 msgid "Redirect single product pages"
 msgstr ""
 
-#: includes/class-admin.php:472
+#: includes/class-admin.php:526
 msgid "Related products"
 msgstr ""
 
-#: includes/class-admin.php:470
+#: includes/class-admin.php:452
+msgid "Save translations"
+msgstr ""
+
+#: includes/class-admin.php:524
 msgid "Shop page"
 msgstr ""
 
-#: includes/class-admin.php:287
+#: includes/class-admin.php:288
 msgid "Show VAT Label"
 msgstr ""
 
-#: includes/class-admin.php:294
+#: includes/class-admin.php:295
 msgid "Show VAT label on frontend"
 msgstr ""
 
-#: includes/class-admin.php:474
+#: includes/class-admin.php:528
 msgid "Single product page"
 msgstr ""
 
-#: includes/class-admin.php:433
+#: includes/class-admin.php:487
 msgid "Test link/url"
 msgstr ""
 
-#: includes/class-frontend.php:316
+#: includes/class-admin.php:414
+msgid "This version includes support for the following languages:"
+msgstr ""
+
+#: includes/class-frontend.php:337
 msgid "to"
 msgstr ""
 
-#: includes/class-admin.php:394
+#: includes/class-admin.php:404
 msgid "Translations"
 msgstr ""
 
-#: includes/class-admin.php:473
+#: includes/class-admin.php:527
 msgid "Upsells/cross-sells"
 msgstr ""
 
@@ -211,6 +239,6 @@ msgstr ""
 msgid "WooSmooth | CollisionCourse"
 msgstr ""
 
-#: includes/class-admin.php:276
+#: includes/class-admin.php:277
 msgid "X - Y"
 msgstr ""

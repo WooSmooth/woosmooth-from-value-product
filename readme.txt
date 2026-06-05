@@ -4,6 +4,7 @@ Tags: woocommerce, product, custom link, redirect, configurator, catalog mode, q
 Requires at least: 6.0
 Tested up to: 7.0
 Requires PHP: 7.4
+Requires Plugins: woocommerce
 Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -135,11 +136,6 @@ woosmooth-from-value-product
 
 5. Optionally configure custom links, button text, price ranges, and frontend behaviour.
 
-== Screenshots ==
-
-1. Product edit screen showing "From Value Product" configuration options.
-2. Global settings page under WooCommerce.
-
 == Frequently Asked Questions ==
 
 = Does this replace WooCommerce checkout? =
@@ -171,6 +167,10 @@ Yes. However, price range functionality is primarily intended for simple product
 Yes. The plugin includes bundled language files and supports WPML, Polylang, and Loco Translate.
 
 == Changelog ==
+
+= 2.1.1 =
+
+* Added native WooCommerce plugin dependency support.
 
 = 2.1.0 =
 
@@ -226,6 +226,10 @@ Yes. The plugin includes bundled language files and supports WPML, Polylang, and
 * Frontend location controls
 
 == Upgrade Notice ==
+
+= 2.1.1 =
+
+Added native WooCommerce plugin dependency support.
 
 = 2.1.0 =
 

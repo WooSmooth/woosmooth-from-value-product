@@ -168,6 +168,10 @@ Yes. The plugin includes bundled language files and supports WPML, Polylang, and
 
 == Changelog ==
 
+= 2.1.2 =
+
+* Added WooSmooth icons.
+
 = 2.1.1 =
 
 * Added native WooCommerce plugin dependency support.
@@ -226,6 +230,10 @@ Yes. The plugin includes bundled language files and supports WPML, Polylang, and
 * Frontend location controls
 
 == Upgrade Notice ==
+
+= 2.1.2 =
+
+Added WooSmooth icons.
 
 = 2.1.1 =
 
